@@ -3,6 +3,7 @@ import ContactForm from 'components/ContactForm/ContactForm';
 import ContactList from 'components/ContactList/ContactList';
 import Filter from 'components/Filter/Filter';
 import { nanoid } from 'nanoid';
+import css from 'components/ContactForm/ContactForm.module.css';
 
 class App extends React.Component {
   state = {
@@ -47,7 +48,7 @@ class App extends React.Component {
     );
 
     return (
-      <div>
+      <div className={css.wrapper}>
         <h1>Phonebook</h1>
         <ContactForm onAddContact={this.handleAddContact} />
 
